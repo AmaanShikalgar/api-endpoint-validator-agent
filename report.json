@@ -1,0 +1,345 @@
+{
+  "timestamp": "2026-03-26T15:33:24.266Z",
+  "total_endpoints": 16,
+  "results": [
+    {
+      "tool_slug": "GMAIL_LIST_MESSAGES",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/messages",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": {
+        "messages": [
+          {
+            "id": "19d2ac74ba1fb2cc",
+            "threadId": "19d2ac74ba1fb2cc"
+          }
+        ],
+        "nextPageToken": "01905567852639251815",
+        "resultSizeEstimate": 201
+      }
+    },
+    {
+      "tool_slug": "GMAIL_GET_MESSAGE",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/messages/{messageId}",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"id\":\"19d2abaefbd1ddd1\",\"threadId\":\"19d2abae93cdd182\",\"labelIds\":[\"UNREAD\",\"TRASH\",\"CATEGORY_UPDATES\"],\"snippet\":\"Address not found Your message wasn&#39;t delivered to [REDACTED_EMAIL] because the domain example.com couldn&#39;t be found. Check for typos or unnecessary spaces and try again. LEARN MORE This link\",\"payload\":{\"partId\":\"\",\"mimeType\":\"multipart/report\",\"filename\":\"\",\"headers\":[{\"name\":\"Delivered-To\",\"value\":\"[REDACTED_EMAIL]\"},{\"name\":\"Received\",\"value\":\"by 2002:a05:6f02:6848:20b0:119:db99:847b with SMTP id j8-n2csp1342554rcb;        Thu, 26 Mar 2026 08:19:47 -0700 (PDT)\"},{\"name\":\"X-Received\",\"value\":\"by 2002:a05:6402:1914:b0:669:e672:78d0 with SMTP id 4fb4d7f45d1cf-66b07e9c363mr202369a12.4.1774538387139;        Thu, 26 Mar 2026 08:19:47 -0700 (PDT)\"},{\"name\":\"ARC-Seal\",\"value\":\"i=1; a=rsa-sha256; t=1774538387; cv=none;        d=google.com; s=arc-20240605;        b=DdVDjaP6Vs8Yxat8LAS9kyMa6BuYXNSQgpzmFPWT2by/bJFtUcj0kLNYFv01FUNC4u         dEO45qSfEdClVKxofpAV4fbFUNYXUXtSymxLK9Eqw6R3ZJWGk9P16vCxPLrRZq0hLbzl         nW5jcxNbdd+bhjeUkmezx5aiOJbQ8Qk3fDEkDRP1lfnmocRwjQYFyY1Ba86mSk4HxX6p         MW0c8O8NH6kfC/VNFnPxpF82t+JiL72r8r8PNRBuxdENO1Laj0cMj575GN2PPWrSJEqs         dGv3fegJTUMmKuRi7fsf/lULES5OMjvR2sMmKMtWcw3wk6LAk8QPHMNUtSSoUkB4l08w         65Eg==\"},{\"name\":\"ARC-Message-Signature\",\"value\":\"i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;        h=in-reply-to:references:subject:from:date:message-id:auto-submitted         :to:dkim-signature;        bh=shAJ09qeK96mLKjsoobv8uKv+AmCQSoXguGp28xfuUY=;        fh=a6DL5krCySMonyvNJmlOpKa/blRRiOnwVJdOEwzEsYQ=;        b=CiFmA9Tm4r/RXWlcARVHLNKZ4JLKBbARsbyYnlbRUq3PUKdhSY8pB/2S84z2RwLcBd         hmCH1rguWjWRfkGjbFH0sFpE3u7hUMzWClSf4Jav8pFRPvShPRADhtHq5ktgvr3fMWKg         Mx9DnJZ6NLwXVgAVpBG2xUSzeXOPjhm+iKRQkANOSM76Ms4CYEF6hKDemLldnHPL+4fm         3VZ6LjNfulr/y6Xlc/V4HW8JHFGRkh1wm+y8pSKkXp2hTNFsaVqyVIg6AxdqwnazjJYx         RCSH0rrnZWCtfM/ls+5wITlA2XfV39lrCbt3bfMJTYB2pQ3uvNarXo9NUXCdmiz7Wtrd         DA3A==;        dara=google.com\"},{\"name\":\"ARC-Authentication-Results\",\"value\":\"i=1; mx.google.com;       dkim=pass header.i=@googlemail.com header.s=20251104 header.b=\\\"E/cDpl0v\\\";       spf=none (google.com: [REDACTED_EMAIL] does not designate permitted sender hosts) smtp.helo=mail-sor-f69.google.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com;       dara=pass header.i=@gmail.com\"},{\"name\":\"Return-Path\",\"value\":\"<>\"},{\"name\":\"Received\",\"value\":\"from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])        by mx.google.com with SMTPS id 4fb4d7f45d1cf-66ad6041f7fsor1044339a12.6.2026.03.26.08.19.47        for <[REDACTED_EMAIL]>        (Google Transport Security);        Thu, 26 Mar 2026 08:19:47 -0700 (PDT)\"},{\"name\":\"Received-SPF\",\"value\":\"none (google.com: [REDACTED_EMAIL] does not designate permitted sender hosts) client-ip=209.85.220.69;\"},{\"name\":\"Authentication-Results\",\"value\":\"mx.google.com;       dkim=pass header.i=@googlemail.com header.s=20251104 header.b=\\\"E/cDpl0v\\\";       spf=none (google.com: [REDACTED_EMAIL] does not designate permitted sender hosts) smtp.helo=mail-sor-f69.google.com;       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=googlemail.com;       dara=pass header.i=@gmail.com\"},{\"name\":\"DKIM-Signature\",\"value\":\"v=1; a=rsa-sha256; c=relaxed/relaxed;        d=googlemail.com; s=20251104; t=1774538387; x=1775143187; dara=google.com;        h=in-reply-to:references:subject:from:date:message-id:auto-submitted         :to:from:to:cc:subject:date:message-id:reply-to;        bh=shAJ09qeK96mLKjsoobv8uKv+AmCQSoXguGp28xfuUY=;        b=E/cDpl0vY6eb3MeD5uVENT6vB0X8wFz91qt2abdK+2Oq9b1nbYcb/1h4SmeiWIVvUl         ih//88no5mDDt47CGL+s01pKjXTcEv/ct90TyiZMjvoaEI9AcO1OPOHSboX/eYItpMre         9oU27jIZePFdb1tJCQ/bS2I/mLTwKY0Lq/nhoYfRiEcsPzy0Mv4SOYJ8xRsCa+CoN7JN         AxjtWY36SQeu7ri4Cm5UbFyxWcFGcYyMweYMPbxcAiaUw6O7pqKJUQVBLeyAPTflqyZk         Y1fpBL745fZ3Q3WW7UTa0nmnOPuZ/jnHPBFFCx26xgs03iNr9pZorOaKX+IOSVErZ91d         XBew==\"},{\"name\":\"X-Google-DKIM-Signature\",\"value\":\"v=1; a=rsa-sha256; c=relaxed/relaxed;        d=1e100.net; s=20251104; t=1774538387; x=1775143187;        h=in-reply-to:references:subject:from:date:message-id:auto-submitted         :to:x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;        bh=shAJ09qeK96mLKjsoobv8uKv+AmCQSoXguGp28xfuUY=;        b=YsHWBY057T7fE57GsMYZ6RbcqrMO1H+Zv5FmlGha7/2hRdZIsrdedaV73kDnDPuoOc         pAudZMPiw5ANzeHUyvgvHm3pXx0rHt7dsc+O1Dm+CxUjvd3sSB8qmZF33dIUGDXv7b4Q         s3gE2SgA6d8Y/ZTzH3mGVcYoQxv+9a8RfPp/LXZVeMQzY263K35/OfZLMyB0kiPz8UgS         voUKsLqMqzAF0tiktDsryf62PnNoHHNiAIi/4nzaCBAyipK6nTE1kwViJ4lTuiU49Oao         ynW4ST7GofQ4OIsn2CZDZ2oDU5Af+IzJ48w+0brCrX7nGRZfHT2YEthA9zMvsKuqs6Co         M+5g==\"},{\"name\":\"X-Gm-Message-State\",\"value\":\"AOJu0YxYddf2I/wLeIcWA6zhkjN2k752fakQn6627fQYuBqynMiO1tLa upnoYZGsy6Vbb4n/Cd5DkuzaAYgRhZ2pACvEKvt6SOFZhQuOjyQdyIByd+NgnEANhjDOx2YanhA rrojm0AexVqsVOI+01lfO349ec0hEyVVtTuDDpE/05DuxafF4nKKC3UZcBZLw\"},{\"name\":\"X-Received\",\"value\":\"by 2002:a05:6402:4290:b0:662:ab67:a560 with SMTP id 4fb4d7f45d1cf-66a826e5156mr5496714a12.24.1774538386823;        Thu, 26 Mar 2026 08:19:46 -0700 (PDT)\"},{\"name\":\"Content-Type\",\"value\":\"multipart/report; boundary=\\\"0000000000002fce18064deeea33\\\"; report-type=delivery-status\"},{\"name\":\"To\",\"value\":\"[REDACTED_EMAIL]\"},{\"name\":\"Received\",\"value\":\"by 2002:a05:6402:4290:b0:662:ab67:a560 with SMTP id 4fb4d7f45d1cf-66a826e5156mr5741740a12.24; Thu, 26 Mar 2026 08:19:46 -0700 (PDT)\"},{\"name\":\"Return-Path\",\"value\":\"<>\"},{\"name\":\"Auto-Submitted\",\"value\":\"auto-replied\"},{\"name\":\"Message-ID\",\"value\":\"<[REDACTED_EMAIL]>\"},{\"name\":\"Date\",\"value\":\"Thu, 26 Mar 2026 08:19:46 -0700 (PDT)\"},{\"name\":\"From\",\"value\":\"Mail Delivery Subsystem <[REDACTED_EMAIL]>\"},{\"name\":\"Subject\",\"value\":\"Delivery Status Notification (Failure)\"},{\"name\":\"References\",\"value\":\"<[REDACTED_EMAIL]>\"},{\"name\":\"In-Reply-To\",\"value\":\"<[REDACTED_EMAIL]>\"},{\"name\":\"X-Failed-Recipients\",\"value\":\"[REDACTED_EMAIL]\"}],\"body\":{\"size\":0},\"parts\":[{\"partId\":\"0\",\"mimeType\":\"multipart/related\",\"filename\":\"\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"multipart/related; boundary=\\\"0000000000002fd82f064deeea4c\\\"\"}],\"body\":{\"size\":0},\"parts\":[{\"partId\":\"0.0\",\"mimeType\":\"multipart/alternative\",\"filename\":\"\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"multipart/alternative; boundary=\\\"0000000000002fd834064deeea4d\\\"\"}],\"body\":{\"size\":0},\"parts\":[{\"partId\":\"0.0.0\",\"mimeType\":\"text/plain\",\"filename\":\"\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/plain; charset=\\\"UTF-8\\\"\"}],\"body\":{\"size\":564,\"data\":\"DQoqKiBBZGRyZXNzIG5vdCBmb3VuZCAqKg0KDQpZb3VyIG1lc3NhZ2Ugd2Fzbid0IGRlbGl2ZXJlZCB0byB0ZXN0QGV4YW1wbGUuY29tIGJlY2F1c2UgdGhlIGRvbWFpbiBleGFtcGxlLmNvbSBjb3VsZG4ndCBiZSBmb3VuZC4gQ2hlY2sgZm9yIHR5cG9zIG9yIHVubmVjZXNzYXJ5IHNwYWNlcyBhbmQgdHJ5IGFnYWluLg0KDQpMZWFybiBtb3JlIGhlcmU6IGh0dHBzOi8vd3d3LnJmYy1lZGl0b3Iub3JnL2luZm8vcmZjNzUwNQ0KKFdhcm5pbmc6IFRoaXMgbGluayB3aWxsIHRha2UgeW91IHRvIGEgdGhpcmQtcGFydHkgc2l0ZSkNCg0KVGhlIHJlc3BvbnNlIHdhczoNCg0KRE5TIEVycm9yOiBETlMgdHlwZSAnbXgnIGxvb2t1cCBvZiBleGFtcGxlLmNvbSByZXNwb25kZWQgd2l0aCBjb2RlIE5PRVJST1INClRoZSBkb21haW4gZXhhbXBsZS5jb20gZG9lc24ndCByZWNlaXZlIGVtYWlsIGFjY29yZGluZyB0byB0aGUgYWRtaW5pc3RyYXRvcjogcmV0dXJuZWQgTnVsbCBNWC4gRm9yIG1vcmUgaW5mb3JtYXRpb24sIGdvIHRvIGh0dHBzOi8vd3d3LnJmYy1lZGl0b3Iub3JnL2luZm8vcmZjNzUwNQ0K\"}},{\"partId\":\"0.0.1\",\"mimeType\":\"text/html\",\"filename\":\"\",\"headers\":[{\"name\":\"Content-Type\",\"value\":\"text/html; charset=\\\"UTF-8\\\"\"}],\"body\":{\"size\":2009,\"data\":\"DQo8aHRtbD4NCjxoZWFkPg0KPHN0eWxlPg0KKiB7DQpmb250LWZhbWlseTpSb2JvdG8sICJIZWx2ZXRpY2EgTmV1ZSIsIEhlbHZldGljYSwgQXJpYWwsIHNhbnMtc2VyaWY7DQp9DQo8L3N0eWxlPg0KPC9oZWFkPg0KPGJvZHk-DQo8dGFibGUgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIiBjbGFzcz0iZW1haWwtd3JhcHBlciIgc3R5bGU9InBhZGRpbmctdG9wOjMycHg7YmFja2dyb3VuZC1jb2xvcjojZmZmZmZmOyI-PHRib2R5Pg0KPHRyPjx0ZD4NCjx0YWJsZSBjZWxscGFkZGluZz0wIGNlbGxzcGFjaW5nPTA-PHRib2R5Pg0KPHRyPjx0ZCBzdHlsZT0ibWF4LXdpZHRoOjU2MHB4O3BhZGRpbmc6MjRweCAyNHB4IDMycHg7YmFja2dyb3VuZC1jb2xvcjojZmFmYWZhO2JvcmRlcjoxcHggc29saWQgI2UwZTBlMDtib3JkZXItcmFkaXVzOjJweCI-DQo8aW1nIHN0eWxlPSJwYWRkaW5nOjAgMjRweCAxNnB4IDA7ZmxvYXQ6bGVmdCIgd2lkdGg9NzIgaGVpZ2h0PTcyIGFsdD0iRXJyb3IgSWNvbiIgc3JjPSJjaWQ6aWNvbi5wbmciPg0KPHRhYmxlIHN0eWxlPSJtaW4td2lkdGg6MjcycHg7cGFkZGluZy10b3A6OHB4Ij48dGJvZHk-DQo8dHI-PHRkPjxoMiBzdHlsZT0iZm9udC1zaXplOjIwcHg7Y29sb3I6IzIxMjEyMTtmb250LXdlaWdodDpib2xkO21hcmdpbjowIj4NCkFkZHJlc3Mgbm90IGZvdW5kDQo8L2gyPjwvdGQ-PC90cj4NCjx0cj48dGQgc3R5bGU9InBhZGRpbmctdG9wOjIwcHg7Y29sb3I6Izc1NzU3NTtmb250LXNpemU6MTZweDtmb250LXdlaWdodDpub3JtYWw7dGV4dC1hbGlnbjpsZWZ0Ij4NCllvdXIgbWVzc2FnZSB3YXNuJ3QgZGVsaXZlcmVkIHRvIDxhIHN0eWxlPSdjb2xvcjojMjEyMTIxO3RleHQtZGVjb3JhdGlvbjpub25lJz48Yj50ZXN0QGV4YW1wbGUuY29tPC9iPjwvYT4gYmVjYXVzZSB0aGUgZG9tYWluIGV4YW1wbGUuY29tIGNvdWxkbid0IGJlIGZvdW5kLiBDaGVjayBmb3IgdHlwb3Mgb3IgdW5uZWNlc3Nhcnkgc3BhY2VzIGFuZCB0cnkgYWdhaW4uDQo8L3RkPjwvdHI-DQo8dHI-PHRkIHN0eWxlPSJwYWRkaW5nLXRvcDoyNHB4O2NvbG9yOiM0Mjg1RjQ7Zm9udC1zaXplOjE0cHg7Zm9udC13ZWlnaHQ6Ym9sZDt0ZXh0LWFsaWduOmxlZnQiPg0KPGEgc3R5bGU9InRleHQtZGVjb3JhdGlvbjpub25lIiBocmVmPSJodHRwczovL3d3dy5yZmMtZWRpdG9yLm9yZy9pbmZvL3JmYzc1MDUiPkxFQVJOIE1PUkU8L2E-DQo8L3RkPjwvdHI-DQo8dHI-PHRkIHN0eWxlPSJtYXJnaW4tdG9wOjhweDtmb250LXN0eWxlOml0YWxpYztmb250LXNpemU6MTJweDtjb2xvcjojNzU3NTc1Ij4NCjxpbWcgc3R5bGU9InBhZGRpbmc6MCA0IDAgMDtmbG9hdDpsZWZ0IiB3aWR0aD0xMiBoZWlnaHQ9MTIgYWx0PSJXYXJuaW5nIiBzcmM9ImNpZDp3YXJuaW5nX3RyaWFuZ2xlLnBuZyI-DQpUaGlzIGxpbmsgd2lsbCB0YWtlIHlvdSB0byBhIHRoaXJkLXBhcnR5IHNpdGUNCjwvdGQ-PC90cj4NCjwvdGJvZHk-PC90YWJsZT4NCjwvdGQ-PC90cj4NCjwvdGJvZHk-PC90YWJsZT4NCjwvdGQ-PC90cj4NCjx0ciBzdHlsZT0iYm9yZGVyOm5vbmU7YmFja2dyb3VuZC1jb2xvcjojZmZmO2ZvbnQtc2l6ZToxMi44cHg7d2lkdGg6OTAlIj4NCjx0ZCBhbGlnbj0ibGVmdCIgc3R5bGU9InBhZGRpbmc6NDhweCAxMHB4Ij4NClRoZSByZXNwb25zZSB3YXM6PGJyLz4NCjxwIHN0eWxlPSJmb250LWZhbWlseTptb25vc3BhY2UiPg0KRE5TIEVycm9yOiBETlMgdHlwZSAnbXgnIGxvb2t1cCBvZiBleGFtcGxlLmNvbSByZXNwb25kZWQgd2l0aCBjb2RlIE5PRVJST1INClRoZSBkb21haW4gZXhhbXBsZS5jb20gZG9lc24ndCByZWNlaXZlIGVtYWlsIGFjY29yZGluZyB0byB0aGUgYW\n...[truncated 8291 chars]"
+    },
+    {
+      "tool_slug": "GMAIL_SEND_MESSAGE",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/messages/send",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.send"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": {
+        "id": "19d2ac74d7201fba",
+        "threadId": "19d2ac74d7201fba",
+        "labelIds": [
+          "SENT"
+        ]
+      }
+    },
+    {
+      "tool_slug": "GMAIL_LIST_LABELS",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/labels",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.labels"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": {
+        "labels": [
+          {
+            "id": "CHAT",
+            "name": "CHAT",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "SENT",
+            "name": "SENT",
+            "type": "system"
+          },
+          {
+            "id": "INBOX",
+            "name": "INBOX",
+            "type": "system"
+          },
+          {
+            "id": "IMPORTANT",
+            "name": "IMPORTANT",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "TRASH",
+            "name": "TRASH",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "DRAFT",
+            "name": "DRAFT",
+            "type": "system"
+          },
+          {
+            "id": "SPAM",
+            "name": "SPAM",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_FORUMS",
+            "name": "CATEGORY_FORUMS",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_UPDATES",
+            "name": "CATEGORY_UPDATES",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_PERSONAL",
+            "name": "CATEGORY_PERSONAL",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_PROMOTIONS",
+            "name": "CATEGORY_PROMOTIONS",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_SOCIAL",
+            "name": "CATEGORY_SOCIAL",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "STARRED",
+            "name": "STARRED",
+            "type": "system"
+          },
+          {
+            "id": "UNREAD",
+            "name": "UNREAD",
+            "type": "system"
+          }
+        ]
+      }
+    },
+    {
+      "tool_slug": "GMAIL_GET_PROFILE",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/profile",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"emailAddress\":\"[REDACTED_EMAIL]\",\"messagesTotal\":52,\"threadsTotal\":45,\"historyId\":\"7508\"}"
+    },
+    {
+      "tool_slug": "GMAIL_CREATE_DRAFT",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/drafts",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.compose"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": {
+        "id": "r-276001861461841503",
+        "message": {
+          "id": "19d2ac74c35f1534",
+          "threadId": "19d2ac74c35f1534",
+          "labelIds": [
+            "DRAFT"
+          ]
+        }
+      }
+    },
+    {
+      "tool_slug": "GMAIL_LIST_THREADS",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/threads",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": {
+        "threads": [
+          {
+            "id": "19d2ac74ba1fb2cc",
+            "snippet": "Hello from agent",
+            "historyId": "7498"
+          }
+        ],
+        "nextPageToken": "01905567852639251815",
+        "resultSizeEstimate": 201
+      }
+    },
+    {
+      "tool_slug": "GMAIL_TRASH_MESSAGE",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/messages/{messageId}/trash",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.modify"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"id\":\"19d2abaefbd1ddd1\",\"threadId\":\"19d2abae93cdd182\",\"labelIds\":[\"UNREAD\",\"TRASH\",\"CATEGORY_UPDATES\"],\"snippet\":\"Address not found Your message wasn&#39;t delivered to [REDACTED_EMAIL] because the domain example.com couldn&#39;t be found. Check for typos or unnecessary spaces and try again. LEARN MORE This link\",\"sizeEstimate\":16276,\"historyId\":\"7513\",\"internalDate\":\"1774538386000\"}"
+    },
+    {
+      "tool_slug": "GMAIL_LIST_FOLDERS",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/folders",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": [],
+      "status": "invalid_endpoint",
+      "http_status_code": 404,
+      "response_summary": "Endpoint appears to not exist (404/405). (HTTP 404) If this endpoint is valid, the definition likely has a wrong method/path.",
+      "response_body": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>404.</b> <ins>That’s an error.</ins>\n  <p>The requested URL <code>/gmail/v1/users/me/folders</code> was not found on this server.  <ins>That’s all we know.</ins>\n"
+    },
+    {
+      "tool_slug": "GMAIL_ARCHIVE_MESSAGE",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/messages/{messageId}/archive",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.modify"
+      ],
+      "available_scopes": [],
+      "status": "invalid_endpoint",
+      "http_status_code": 404,
+      "response_summary": "Endpoint appears to not exist (404/405). (HTTP 404) If this endpoint is valid, the definition likely has a wrong method/path.",
+      "response_body": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>404.</b> <ins>That’s an error.</ins>\n  <p>The requested URL <code>/gmail/v1/users/me/messages/19d2abaefbd1ddd1/archive</code> was not found on this server.  <ins>That’s all we know.</ins>\n"
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_LIST_EVENTS",
+      "method": "GET",
+      "path": "/calendar/v3/calendars/primary/events",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"kind\":\"calendar#events\",\"etag\":\"\\\"p33fpfm6htqup60o\\\"\",\"summary\":\"[REDACTED_EMAIL]\",\"description\":\"\",\"updated\":\"2026-03-26T15:19:47.229Z\",\"timeZone\":\"Asia/Kolkata\",\"accessRole\":\"owner\",\"defaultReminders\":[{\"method\":\"popup\",\"minutes\":30}],\"nextPageToken\":\"CkAKMAouCgwI8YyVzgYQmN2R9wESHgocCho3bGx2Y2gzZ2psdW02OGZnMmR1ZDlpbDl0cxoMCL2jlc4GEMiqgZwCwD4B\",\"items\":[]}"
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_CREATE_EVENT",
+      "method": "POST",
+      "path": "/calendar/v3/calendars/primary/events",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.events"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"kind\":\"calendar#event\",\"etag\":\"\\\"3549078399516222\\\"\",\"id\":\"t1s3kdkn3gmq1eh4rvqkr3bkt0\",\"status\":\"confirmed\",\"htmlLink\":\"https://www.google.com/calendar/event?eid=dDFzM2tka24zZ21xMWVoNHJ2cWtyM2JrdDAgYW1hYW5jbG91ZDIwMjVAbQ\",\"created\":\"2026-03-26T15:33:19.000Z\",\"updated\":\"2026-03-26T15:33:19.758Z\",\"summary\":\"test\",\"creator\":{\"email\":\"[REDACTED_EMAIL]\",\"self\":true},\"organizer\":{\"email\":\"[REDACTED_EMAIL]\",\"self\":true},\"start\":{\"dateTime\":\"2026-03-26T21:03:18+05:30\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2026-03-26T21:03:18+05:30\",\"timeZone\":\"UTC\"},\"iCalUID\":\"[REDACTED_EMAIL]\",\"sequence\":0,\"reminders\":{\"useDefault\":true},\"eventType\":\"default\"}"
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_GET_EVENT",
+      "method": "GET",
+      "path": "/calendar/v3/calendars/primary/events/{eventId}",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"kind\":\"calendar#event\",\"etag\":\"\\\"3549078401116222\\\"\",\"id\":\"k9bfh4bk7kothaddlk6otol8cs\",\"status\":\"confirmed\",\"htmlLink\":\"https://www.google.com/calendar/event?eid=azliZmg0Yms3a290aGFkZGxrNm90b2w4Y3MgYW1hYW5jbG91ZDIwMjVAbQ\",\"created\":\"2026-03-26T15:33:20.000Z\",\"updated\":\"2026-03-26T15:33:20.558Z\",\"summary\":\"test\",\"creator\":{\"email\":\"[REDACTED_EMAIL]\",\"self\":true},\"organizer\":{\"email\":\"[REDACTED_EMAIL]\",\"self\":true},\"start\":{\"dateTime\":\"2026-03-26T21:03:22+05:30\",\"timeZone\":\"UTC\"},\"end\":{\"dateTime\":\"2026-03-26T21:03:22+05:30\",\"timeZone\":\"UTC\"},\"iCalUID\":\"[REDACTED_EMAIL]\",\"sequence\":0,\"reminders\":{\"useDefault\":true},\"eventType\":\"default\"}"
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_LIST_CALENDARS",
+      "method": "GET",
+      "path": "/calendar/v3/users/me/calendarList",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Received a successful 2xx response. (HTTP 200)",
+      "response_body": "{\"kind\":\"calendar#calendarList\",\"etag\":\"\\\"p327rfreku6up60o\\\"\",\"nextPageToken\":\"EiIKDAjCzpTOBhDg7uPlARISZzowMDAwMDAyZGRmNGM0ZDY0Gh4SCQcGTe8aooWdAKrJiIwEDRILCL-jlc4GEJjh21M=\",\"items\":[{\"kind\":\"calendar#calendarListEntry\",\"etag\":\"\\\"1774528322481884\\\"\",\"id\":\"[REDACTED_EMAIL]\",\"summary\":\"[REDACTED_EMAIL]\",\"timeZone\":\"Asia/Kolkata\",\"colorId\":\"14\",\"backgroundColor\":\"#9fe1e7\",\"foregroundColor\":\"#000000\",\"selected\":true,\"accessRole\":\"owner\",\"defaultReminders\":[{\"method\":\"popup\",\"minutes\":30}],\"notificationSettings\":{\"notifications\":[{\"type\":\"eventCreation\",\"method\":\"email\"},{\"type\":\"eventChange\",\"method\":\"email\"},{\"type\":\"eventCancellation\",\"method\":\"email\"},{\"type\":\"eventResponse\",\"method\":\"email\"}]},\"primary\":true,\"conferenceProperties\":{\"allowedConferenceSolutionTypes\":[\"hangoutsMeet\"]}}]}"
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_DELETE_EVENT",
+      "method": "DELETE",
+      "path": "/calendar/v3/calendars/primary/events/{eventId}",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.events"
+      ],
+      "available_scopes": [],
+      "status": "valid",
+      "http_status_code": 204,
+      "response_summary": "Received a successful 2xx response. (HTTP 204)",
+      "response_body": ""
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_LIST_REMINDERS",
+      "method": "GET",
+      "path": "/calendar/v3/calendars/primary/reminders",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": [],
+      "status": "invalid_endpoint",
+      "http_status_code": 404,
+      "response_summary": "Endpoint appears to not exist (404/405). (HTTP 404) If this endpoint is valid, the definition likely has a wrong method/path.",
+      "response_body": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>404.</b> <ins>That’s an error.</ins>\n  <p>The requested URL <code>/calendar/v3/calendars/primary/reminders</code> was not found on this server.  <ins>That’s all we know.</ins>\n"
+    }
+  ],
+  "summary": {
+    "valid": 13,
+    "invalid_endpoint": 3,
+    "insufficient_scopes": 0,
+    "error": 0
+  }
+}
